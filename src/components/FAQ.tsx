@@ -17,7 +17,7 @@ export default function FAQ() {
   const faqDesktop = faq;
 
   return (
-    <section id="faq" className="py-16 md:py-24">
+    <section id="faq" className="bg-section-alt py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <SectionHeader
           badge={sec.badge}
@@ -37,7 +37,7 @@ export default function FAQ() {
                   onToggle={() => setOpenIndex(openIndex === i ? null : i)}
                 />
               ))}
-              <p className="mt-6 rounded-xl border border-wine/15 bg-wine/5 p-4 text-center text-sm text-dark/70">
+              <p className="mt-6 rounded-xl border border-wine/25 bg-dark-elevated p-4 text-center text-sm text-cream/70">
                 {sec.textoMaisDuvidasMobile}{" "}
                 <a
                   href={buildWhatsAppUrl(
@@ -46,7 +46,7 @@ export default function FAQ() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-wine underline"
+                  className="font-semibold text-gold underline"
                 >
                   {sec.linkMaisDuvidas}
                 </a>
@@ -67,7 +67,7 @@ export default function FAQ() {
         </MotionReveal>
 
         <div className="mt-10 hidden text-center md:block">
-          <p className="mb-4 text-dark/65">{sec.textoRodapeDesktop}</p>
+          <p className="mb-4 text-cream/65">{sec.textoRodapeDesktop}</p>
           <WhatsAppButton
             mensagem={contato.whatsapp.mensagemFaq}
             variant="primary"
@@ -94,8 +94,8 @@ function FaqItem({
     <div
       className={`overflow-hidden rounded-xl border transition-colors ${
         isOpen
-          ? "border-wine/30 bg-wine/5 shadow-md shadow-wine/5"
-          : "border-wine/10 bg-white"
+          ? "border-wine/40 bg-wine/15 shadow-md shadow-wine/10"
+          : "card-surface"
       }`}
     >
       <button
@@ -103,10 +103,10 @@ function FaqItem({
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="font-semibold text-dark">{item.pergunta}</span>
+        <span className="font-semibold text-cream">{item.pergunta}</span>
         <ChevronDown
           size={20}
-          className={`shrink-0 text-wine transition-transform duration-300 ${
+          className={`shrink-0 text-gold transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -117,7 +117,7 @@ function FaqItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="border-t border-wine/10 px-5 pb-4 pt-2 text-sm leading-relaxed text-dark/65">
+          <p className="border-t border-wine/20 px-5 pb-4 pt-2 text-sm leading-relaxed text-cream/65">
             {item.resposta}
           </p>
         </div>

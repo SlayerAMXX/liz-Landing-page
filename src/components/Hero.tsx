@@ -10,25 +10,25 @@ export default function Hero() {
   const { hero, estatisticas, imagens } = siteConfig;
 
   return (
-    <section className="relative overflow-hidden border-b border-wine/10 pt-24 pb-16 md:pt-32 md:pb-24">
+    <section className="relative overflow-hidden border-b border-wine/20 pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-wine/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-gold/20 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:gap-12 md:px-6">
         <MotionReveal>
           <div className="mb-4 h-1 w-16 rounded-full bg-gradient-to-r from-wine to-gold" />
-          <h1 className="font-serif text-4xl font-bold leading-tight text-dark md:text-5xl lg:text-6xl">
+          <h1 className="font-serif text-4xl font-bold leading-tight text-cream md:text-5xl lg:text-6xl">
             {hero.headlineInicio}{" "}
-            <span className="bg-gradient-to-r from-wine to-wine-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
               {hero.headlineDestaque}
             </span>{" "}
             {hero.headlineFim}
           </h1>
 
-          <p className="mt-5 text-base leading-relaxed text-dark/70 md:hidden">
+          <p className="mt-5 text-base leading-relaxed text-cream/70 md:hidden">
             {hero.subtituloMobile}
           </p>
-          <p className="mt-5 hidden text-lg leading-relaxed text-dark/70 md:block">
+          <p className="mt-5 hidden text-lg leading-relaxed text-cream/70 md:block">
             {hero.subtituloDesktop}
           </p>
 
@@ -49,14 +49,14 @@ export default function Hero() {
             </WhatsAppButton>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-wine/30 bg-white/60 px-6 py-3 text-sm font-semibold text-wine backdrop-blur-sm transition-colors hover:border-wine hover:bg-wine hover:text-cream"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold/40 bg-dark-elevated/80 px-6 py-3 text-sm font-semibold text-gold backdrop-blur-sm transition-colors hover:border-gold hover:bg-gold hover:text-dark"
             >
               {hero.ctaSecundario}
               <ArrowDown size={16} />
             </a>
           </div>
 
-          <p className="mt-6 inline-block rounded-full border border-gold/40 bg-gold/15 px-4 py-1.5 text-sm font-semibold text-wine md:hidden">
+          <p className="mt-6 inline-block rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-sm font-semibold text-gold md:hidden">
             {hero.provaSocialMobile}
           </p>
 
@@ -66,10 +66,10 @@ export default function Hero() {
                 key={stat.label}
                 className="border-l-2 border-gold/50 pl-4 first:border-l-0 first:pl-0"
               >
-                <p className="font-serif text-3xl font-bold text-wine">
+                <p className="font-serif text-3xl font-bold text-gold">
                   {stat.valor}
                 </p>
-                <p className="text-sm text-dark/60">{stat.label}</p>
+                <p className="text-sm text-cream/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -110,13 +110,13 @@ export default function Hero() {
         </MotionReveal>
       </div>
 
-      <div className="relative mx-auto mt-10 flex justify-around rounded-2xl border border-wine/10 bg-white/50 px-4 py-4 backdrop-blur-sm md:hidden">
+      <div className="relative mx-auto mt-10 flex justify-around rounded-2xl border border-wine/25 bg-dark-elevated/90 px-4 py-4 backdrop-blur-sm md:hidden">
         {estatisticas.map((stat) => (
           <div key={stat.label} className="text-center">
-            <p className="font-serif text-2xl font-bold text-wine">
+            <p className="font-serif text-2xl font-bold text-gold">
               {stat.valor}
             </p>
-            <p className="text-xs text-dark/60">{stat.labelMobile}</p>
+            <p className="text-xs text-cream/60">{stat.labelMobile}</p>
           </div>
         ))}
       </div>

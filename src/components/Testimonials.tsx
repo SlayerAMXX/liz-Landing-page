@@ -14,7 +14,7 @@ export default function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="border-y border-wine/10 bg-gradient-to-b from-wine/10 via-cream to-gold/10 py-16 md:py-24"
+      className="border-y border-wine/20 bg-dark py-16 md:py-24"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <SectionHeader
@@ -24,13 +24,13 @@ export default function Testimonials() {
           descricao={sec.descricaoDesktop}
         />
 
-        <div className="mb-10 flex justify-center gap-8 rounded-2xl border border-wine/15 bg-white/70 py-6 md:mb-14">
+        <div className="mb-10 flex justify-center gap-8 rounded-2xl border border-wine/25 bg-dark-elevated py-6 md:mb-14">
           {sec.estatisticas.map((stat) => (
-            <div key={stat.label} className="text-center px-4">
-              <p className="font-serif text-2xl font-bold text-wine md:text-3xl">
+            <div key={stat.label} className="px-4 text-center">
+              <p className="font-serif text-2xl font-bold text-gold md:text-3xl">
                 {stat.valor}
               </p>
-              <p className="text-xs font-medium text-dark/60 md:text-sm">
+              <p className="text-xs font-medium text-cream/60 md:text-sm">
                 {stat.label}
               </p>
             </div>
@@ -39,9 +39,9 @@ export default function Testimonials() {
 
         {destaque && (
           <MotionReveal>
-            <article className="mb-8 rounded-2xl border-2 border-gold/50 bg-white p-6 shadow-xl shadow-wine/15 md:p-8">
+            <article className="mb-8 rounded-2xl border-2 border-gold/40 bg-dark-elevated p-6 shadow-xl shadow-wine/20 md:p-8">
               <div className="mb-4 flex items-center justify-between">
-                <span className="rounded-full border border-gold/40 bg-gold/25 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-wine">
+                <span className="rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gold">
                   {sec.labelDestaque}
                 </span>
                 <div className="flex gap-0.5 text-gold">
@@ -50,7 +50,7 @@ export default function Testimonials() {
                   ))}
                 </div>
               </div>
-              <blockquote className="border-l-4 border-wine/30 pl-4 font-serif text-lg leading-relaxed text-dark md:text-xl">
+              <blockquote className="border-l-4 border-gold/40 pl-4 font-serif text-lg leading-relaxed text-cream md:text-xl">
                 &ldquo;
                 <span className="md:hidden">{destaque.textoResumo}</span>
                 <span className="hidden md:inline">
@@ -63,9 +63,9 @@ export default function Testimonials() {
                   {destaque.iniciais}
                 </div>
                 <div>
-                  <p className="font-semibold text-dark">{destaque.nome}</p>
-                  <p className="text-sm text-dark/60">{destaque.cargo}</p>
-                  <p className="text-sm font-semibold text-wine">
+                  <p className="font-semibold text-cream">{destaque.nome}</p>
+                  <p className="text-sm text-cream/60">{destaque.cargo}</p>
+                  <p className="text-sm font-semibold text-gold">
                     {destaque.resultado}
                   </p>
                 </div>
@@ -77,27 +77,27 @@ export default function Testimonials() {
         <div className="grid gap-6 md:grid-cols-3">
           {outros.map((dep, i) => (
             <MotionReveal key={dep.nome} delay={i * 0.08}>
-              <article className="card-premium h-full rounded-2xl bg-white p-5 transition-all hover:-translate-y-0.5">
+              <article className="card-premium h-full rounded-2xl p-5 transition-all hover:-translate-y-0.5">
                 <div className="mb-3 flex gap-0.5 text-gold">
                   {Array.from({ length: dep.avaliacao }).map((_, j) => (
                     <Star key={j} size={14} fill="currentColor" />
                   ))}
                 </div>
-                <blockquote className="text-sm leading-relaxed text-dark/80">
+                <blockquote className="text-sm leading-relaxed text-cream/80">
                   &ldquo;
                   <span className="md:hidden">{dep.textoResumo}</span>
                   <span className="hidden md:inline">{dep.textoCompleto}</span>
                   &rdquo;
                 </blockquote>
-                <footer className="mt-4 flex items-center gap-3 border-t border-wine/15 pt-4">
+                <footer className="mt-4 flex items-center gap-3 border-t border-wine/25 pt-4">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full bg-wine text-xs font-semibold text-gold">
                     {dep.iniciais}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-dark">
+                    <p className="text-sm font-semibold text-cream">
                       {dep.nome}
                     </p>
-                    <p className="text-xs text-wine/80">{dep.servico}</p>
+                    <p className="text-xs text-gold/80">{dep.servico}</p>
                   </div>
                 </footer>
               </article>

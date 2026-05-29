@@ -21,18 +21,18 @@ export default function HowItWorks() {
           <div className="space-y-5">
             {passos.map((passo, i) => (
               <MotionReveal key={passo.numero} delay={i * 0.07}>
-                <article className="flex gap-5 rounded-2xl border border-wine/15 bg-white/80 p-5 shadow-md shadow-wine/5 transition-shadow hover:border-wine/30 hover:shadow-lg hover:shadow-wine/10">
+                <article className="card-surface flex gap-5 rounded-2xl p-5 transition-shadow hover:border-wine/40 hover:shadow-lg hover:shadow-wine/10">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-wine font-serif text-lg font-bold text-gold">
                     {passo.numero}
                   </span>
                   <div>
-                    <h3 className="font-serif text-lg font-bold text-dark md:text-xl">
+                    <h3 className="font-serif text-lg font-bold text-cream md:text-xl">
                       <span className="md:hidden">{passo.tituloMobile}</span>
                       <span className="hidden md:inline">
                         {passo.tituloCompleto}
                       </span>
                     </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-dark/65">
+                    <p className="mt-1 text-sm leading-relaxed text-cream/65">
                       {passo.descricao}
                     </p>
                   </div>
@@ -42,7 +42,7 @@ export default function HowItWorks() {
           </div>
 
           <MotionReveal delay={0.2}>
-            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-wine/20 shadow-2xl shadow-wine/15">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-wine/30 shadow-2xl shadow-black/40">
               <Image
                 src={imagens.ceo}
                 alt={sec.imagemCeo.titulo}

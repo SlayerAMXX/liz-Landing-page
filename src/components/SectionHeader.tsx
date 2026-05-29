@@ -3,7 +3,8 @@ type SectionHeaderProps = {
   titulo: string;
   tituloDestaque?: string;
   descricao?: string;
-  dark?: boolean;
+  /** Seção com fundo vinho (badge/texto adaptados) */
+  onWine?: boolean;
 };
 
 export default function SectionHeader({
@@ -11,38 +12,28 @@ export default function SectionHeader({
   titulo,
   tituloDestaque,
   descricao,
-  dark = false,
+  onWine = false,
 }: SectionHeaderProps) {
   return (
     <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
       <span
         className={`mb-4 inline-block rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-widest ${
-          dark
+          onWine
             ? "border-gold/40 bg-gold/15 text-gold"
-            : "border-wine/20 bg-wine/10 text-wine"
+            : "border-gold/30 bg-gold/10 text-gold"
         }`}
       >
         {badge}
       </span>
       <div className="gold-divider mb-5" />
-      <h2
-        className={`font-serif text-3xl font-bold md:text-4xl lg:text-5xl ${
-          dark ? "text-cream" : "text-dark"
-        }`}
-      >
+      <h2 className="font-serif text-3xl font-bold text-cream md:text-4xl lg:text-5xl">
         {titulo}{" "}
         {tituloDestaque && (
-          <span className={dark ? "text-gold" : "text-wine"}>
-            {tituloDestaque}
-          </span>
+          <span className="text-gold">{tituloDestaque}</span>
         )}
       </h2>
       {descricao && (
-        <p
-          className={`mt-4 text-base leading-relaxed md:text-lg ${
-            dark ? "text-cream/75" : "text-dark/65"
-          }`}
-        >
+        <p className="mt-4 text-base leading-relaxed text-cream/70 md:text-lg">
           {descricao}
         </p>
       )}

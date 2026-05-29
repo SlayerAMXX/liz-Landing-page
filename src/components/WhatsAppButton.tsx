@@ -50,7 +50,7 @@ export function NavLink({
   return (
     <Link
       href={href}
-      className="text-sm font-medium text-dark/75 transition-colors hover:text-wine"
+      className="text-sm font-medium text-cream/75 transition-colors hover:text-gold"
     >
       {children}
     </Link>

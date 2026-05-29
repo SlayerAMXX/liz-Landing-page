@@ -11,7 +11,7 @@ export default function Navbar() {
   const { navegacao, imagens, site } = siteConfig;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-wine/20 bg-cream/95 shadow-sm shadow-wine/5 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-wine/30 bg-dark/95 shadow-lg shadow-black/30 backdrop-blur-md">
       <div className="h-1 bg-gradient-to-r from-wine via-gold to-wine" />
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
         <a href="#" className="flex items-center gap-2">
@@ -41,7 +41,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="rounded-lg border border-wine/20 bg-wine/5 p-2 text-wine md:hidden"
+          className="rounded-lg border border-gold/30 bg-wine/20 p-2 text-gold md:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
         >
@@ -50,7 +50,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-wine/15 bg-cream px-4 py-4 md:hidden">
+        <nav className="border-t border-wine/25 bg-dark-elevated px-4 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {navegacao.links.map((link) => (
               <NavLink key={link.href} href={link.href}>

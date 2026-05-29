@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${dmSans.variable}`}>
-      <body className="antialiased bg-mesh-cream">{children}</body>
+      <body className="antialiased bg-mesh-dark">{children}</body>
     </html>
   );
 }

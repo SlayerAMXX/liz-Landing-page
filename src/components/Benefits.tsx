@@ -15,7 +15,7 @@ export default function Benefits() {
           titulo={sec.titulo}
           tituloDestaque={sec.tituloDestaque}
           descricao={sec.descricaoDesktop}
-          dark
+          onWine
         />
 
         <p className="mb-8 text-center text-sm font-medium text-gold/80 md:hidden">
