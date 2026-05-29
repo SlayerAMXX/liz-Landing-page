@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { siteConfig } from "@/lib/site-config.server";
 
 export default function Home() {
@@ -40,6 +41,11 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <FloatingWhatsApp
+        numero={contato.whatsapp.numero}
+        mensagemPadrao={contato.whatsapp.mensagemPadrao}
+        ariaLabel={ui.whatsappAriaLabel}
+      />
     </>
   );
 }
