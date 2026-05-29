@@ -1,11 +1,11 @@
-import Image from "next/image";
 import { Instagram, Mail, Phone } from "lucide-react";
+import SiteLogo from "./SiteLogo";
 import { siteConfig } from "@/lib/site-config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import MotionReveal from "./MotionReveal";
 
 export default function Footer() {
-  const { footer, contato, imagens, site, navegacao, servicos } = siteConfig;
+  const { footer, contato, navegacao, servicos } = siteConfig;
   const year = new Date().getFullYear();
 
   return (
@@ -17,13 +17,7 @@ export default function Footer() {
         <MotionReveal>
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-2 md:gap-10 md:text-left lg:grid-cols-4">
             <div className="flex flex-col items-center md:items-start">
-              <Image
-                src={imagens.logo}
-                alt={site.nome}
-                width={200}
-                height={72}
-                className="mb-3 h-12 w-auto min-w-[140px] brightness-0 invert md:mb-4 md:h-14"
-              />
+              <SiteLogo variant="footer" className="mb-3 md:mb-4" />
               <p className="max-w-xs text-xs leading-relaxed text-cream/55 md:max-w-none md:text-sm">
                 {footer.descricao}
               </p>

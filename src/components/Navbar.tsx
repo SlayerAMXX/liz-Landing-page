@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import SiteLogo from "./SiteLogo";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/lib/site-config";
 import { NavLink } from "./WhatsAppButton";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { navegacao, imagens, site } = siteConfig;
+  const { navegacao } = siteConfig;
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -23,15 +23,8 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-wine/30 bg-dark/95 shadow-lg shadow-black/30 backdrop-blur-md">
       <div className="h-1 bg-gradient-to-r from-wine via-gold to-wine" />
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6 md:py-4">
-        <a href="#" className="flex items-center gap-2 transition-opacity hover:opacity-90">
-          <Image
-            src={imagens.logo}
-            alt={site.nome}
-            width={200}
-            height={72}
-            className="h-12 w-auto min-w-[120px] sm:h-14 md:h-16"
-            priority
-          />
+        <a href="#" className="flex shrink-0 items-center transition-opacity hover:opacity-90">
+          <SiteLogo variant="navbar" priority />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
