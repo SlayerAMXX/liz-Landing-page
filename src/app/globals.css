@@ -3,11 +3,14 @@
 @theme {
   --color-wine: #6b0000;
   --color-wine-dark: #4a0000;
+  --color-wine-light: #8a1a1a;
   --color-gold: #d9c08a;
   --color-gold-light: #e8d7b0;
+  --color-gold-dark: #b89a5c;
   --color-dark: #111111;
   --color-cream: #f5f1e8;
-  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-serif: var(--font-playfair), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -17,8 +20,49 @@ html {
 body {
   background-color: var(--color-cream);
   color: var(--color-dark);
+  font-family: var(--font-sans);
 }
 
 ::selection {
-  background-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-gold) 45%, transparent);
+  color: var(--color-dark);
+}
+
+/* Padrão decorativo sutil no fundo */
+.bg-mesh-cream {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, color-mix(in srgb, var(--color-wine) 12%, transparent), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, color-mix(in srgb, var(--color-gold) 18%, transparent), transparent);
+}
+
+.bg-mesh-wine {
+  background-color: var(--color-wine);
+  background-image:
+    radial-gradient(ellipse 70% 60% at 100% 0%, color-mix(in srgb, var(--color-gold) 25%, transparent), transparent),
+    radial-gradient(ellipse 50% 50% at 0% 100%, color-mix(in srgb, var(--color-wine-dark) 80%, transparent), transparent);
+}
+
+.bg-section-alt {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-wine) 6%, var(--color-cream)) 0%,
+    var(--color-cream) 40%,
+    color-mix(in srgb, var(--color-gold) 8%, var(--color-cream)) 100%
+  );
+}
+
+.gold-divider {
+  height: 3px;
+  width: 4rem;
+  margin-inline: auto;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.card-premium {
+  border: 1px solid color-mix(in srgb, var(--color-gold) 35%, transparent);
+  box-shadow:
+    0 4px 24px color-mix(in srgb, var(--color-wine) 8%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--color-gold) 20%, transparent);
 }

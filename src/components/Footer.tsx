@@ -8,8 +8,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contato" className="border-t border-gold/10 bg-dark py-12 md:py-16">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
+    <footer className="border-t-4 border-gold/30 bg-dark py-12 md:py-16">
+      <div className="h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
+      <div className="mx-auto max-w-6xl px-4 pt-10 md:px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Image
@@ -33,7 +34,7 @@ export default function Footer() {
                 <li key={s.titulo}>
                   <a
                     href="#servicos"
-                    className="text-sm text-cream/60 transition-colors hover:text-cream"
+                    className="text-sm text-cream/60 transition-colors hover:text-gold"
                   >
                     {s.titulo}
                   </a>
@@ -51,7 +52,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-cream/60 transition-colors hover:text-cream"
+                    className="text-sm text-cream/60 transition-colors hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -73,7 +74,7 @@ export default function Footer() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-cream"
+                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-gold"
                 >
                   <Phone size={16} className="text-gold" />
                   {contato.telefone.exibicao}
@@ -82,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${contato.email}`}
-                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-cream"
+                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-gold"
                 >
                   <Mail size={16} className="text-gold" />
                   {contato.email}
@@ -93,7 +94,7 @@ export default function Footer() {
                   href={contato.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-cream"
+                  className="flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-gold"
                 >
                   <Instagram size={16} className="text-gold" />
                   {contato.instagram.usuario}

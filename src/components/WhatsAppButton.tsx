@@ -6,15 +6,16 @@ type WhatsAppButtonProps = {
   mensagem?: string;
   children: React.ReactNode;
   className?: string;
-  variant?: "primary" | "outline" | "ghost";
+  variant?: "primary" | "gold" | "outline" | "ghost";
 };
 
 const variants = {
   primary:
-    "bg-wine text-cream hover:bg-wine-dark shadow-lg shadow-wine/20",
+    "bg-wine text-cream hover:bg-wine-dark shadow-lg shadow-wine/30 border border-wine-dark/50",
+  gold: "bg-gold text-dark hover:bg-gold-light shadow-lg shadow-gold/30 border border-gold-dark/40",
   outline:
-    "border-2 border-gold text-gold hover:bg-gold hover:text-dark",
-  ghost: "text-wine hover:bg-wine/5",
+    "border-2 border-gold bg-transparent text-gold hover:bg-gold hover:text-dark",
+  ghost: "text-wine hover:bg-wine/10",
 };
 
 export default function WhatsAppButton({
@@ -49,7 +50,7 @@ export function NavLink({
   return (
     <Link
       href={href}
-      className="text-sm text-dark/70 transition-colors hover:text-wine"
+      className="text-sm font-medium text-dark/75 transition-colors hover:text-wine"
     >
       {children}
     </Link>

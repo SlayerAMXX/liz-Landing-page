@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import SectionHeader from "./SectionHeader";
+import MotionReveal from "./MotionReveal";
 
 export default function HowItWorks() {
   const { secoes, passos, imagens } = siteConfig;
   const sec = secoes.comoFunciona;
 
   return (
-    <section id="como-funciona" className="py-16 md:py-24">
+    <section id="como-funciona" className="bg-section-alt py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <SectionHeader
           badge={sec.badge}
@@ -17,51 +18,52 @@ export default function HowItWorks() {
         />
 
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="space-y-6">
-            {passos.map((passo) => (
-              <article
-                key={passo.numero}
-                className="flex gap-5 rounded-2xl border border-wine/10 bg-white/50 p-5 transition-shadow hover:shadow-lg hover:shadow-wine/5"
-              >
-                <span className="font-serif text-3xl font-bold text-gold">
-                  {passo.numero}
-                </span>
-                <div>
-                  <h3 className="font-serif text-lg font-bold text-dark md:text-xl">
-                    <span className="md:hidden">{passo.tituloMobile}</span>
-                    <span className="hidden md:inline">
-                      {passo.tituloCompleto}
-                    </span>
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-dark/60">
-                    {passo.descricao}
-                  </p>
-                </div>
-              </article>
+          <div className="space-y-5">
+            {passos.map((passo, i) => (
+              <MotionReveal key={passo.numero} delay={i * 0.07}>
+                <article className="flex gap-5 rounded-2xl border border-wine/15 bg-white/80 p-5 shadow-md shadow-wine/5 transition-shadow hover:border-wine/30 hover:shadow-lg hover:shadow-wine/10">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-wine font-serif text-lg font-bold text-gold">
+                    {passo.numero}
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-bold text-dark md:text-xl">
+                      <span className="md:hidden">{passo.tituloMobile}</span>
+                      <span className="hidden md:inline">
+                        {passo.tituloCompleto}
+                      </span>
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-dark/65">
+                      {passo.descricao}
+                    </p>
+                  </div>
+                </article>
+              </MotionReveal>
             ))}
           </div>
 
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl shadow-wine/10">
-            <Image
-              src={imagens.ceo}
-              alt={sec.imagemCeo.titulo}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-wine/70 via-wine/20 to-transparent" />
-            <div className="absolute bottom-0 p-6 md:p-8">
-              <span className="text-xs font-semibold uppercase tracking-widest text-gold">
-                {sec.imagemCeo.badge}
-              </span>
-              <h3 className="mt-2 font-serif text-2xl font-bold text-cream md:text-3xl">
-                {sec.imagemCeo.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream/80">
-                {sec.imagemCeo.descricao}
-              </p>
+          <MotionReveal delay={0.2}>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-wine/20 shadow-2xl shadow-wine/15">
+              <Image
+                src={imagens.ceo}
+                alt={sec.imagemCeo.titulo}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-wine/90 via-wine/30 to-wine/10" />
+              <div className="absolute bottom-0 p-6 md:p-8">
+                <span className="rounded-full border border-gold/40 bg-gold/20 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gold">
+                  {sec.imagemCeo.badge}
+                </span>
+                <h3 className="mt-3 font-serif text-2xl font-bold text-cream md:text-3xl">
+                  {sec.imagemCeo.titulo}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-cream/85">
+                  {sec.imagemCeo.descricao}
+                </p>
+              </div>
             </div>
-          </div>
+          </MotionReveal>
         </div>
       </div>
     </section>

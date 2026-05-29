@@ -16,14 +16,15 @@ export default function SectionHeader({
   return (
     <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
       <span
-        className={`mb-4 inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest ${
+        className={`mb-4 inline-block rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-widest ${
           dark
-            ? "bg-gold/20 text-gold"
-            : "bg-wine/10 text-wine"
+            ? "border-gold/40 bg-gold/15 text-gold"
+            : "border-wine/20 bg-wine/10 text-wine"
         }`}
       >
         {badge}
       </span>
+      <div className="gold-divider mb-5" />
       <h2
         className={`font-serif text-3xl font-bold md:text-4xl lg:text-5xl ${
           dark ? "text-cream" : "text-dark"
@@ -39,7 +40,7 @@ export default function SectionHeader({
       {descricao && (
         <p
           className={`mt-4 text-base leading-relaxed md:text-lg ${
-            dark ? "text-cream/70" : "text-dark/60"
+            dark ? "text-cream/75" : "text-dark/65"
           }`}
         >
           {descricao}

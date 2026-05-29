@@ -6,6 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import SectionHeader from "./SectionHeader";
 import WhatsAppButton from "./WhatsAppButton";
+import MotionReveal from "./MotionReveal";
 
 export default function FAQ() {
   const { secoes, faq, contato } = siteConfig;
@@ -25,47 +26,52 @@ export default function FAQ() {
           descricao={sec.descricaoDesktop}
         />
 
-        <div className="space-y-3">
-          <div className="md:hidden">
-            {faqMobile.map((item, i) => (
-              <FaqItem
-                key={item.pergunta}
-                item={item}
-                isOpen={openIndex === i}
-                onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              />
-            ))}
-            <p className="mt-6 text-center text-sm text-dark/60">
-              {sec.textoMaisDuvidasMobile}{" "}
-              <a
-                href={buildWhatsAppUrl(
-                  contato.whatsapp.numero,
-                  contato.whatsapp.mensagemFaqExtra
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-wine underline"
-              >
-                {sec.linkMaisDuvidas}
-              </a>
-            </p>
-          </div>
+        <MotionReveal>
+          <div className="space-y-3">
+            <div className="md:hidden">
+              {faqMobile.map((item, i) => (
+                <FaqItem
+                  key={item.pergunta}
+                  item={item}
+                  isOpen={openIndex === i}
+                  onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+                />
+              ))}
+              <p className="mt-6 rounded-xl border border-wine/15 bg-wine/5 p-4 text-center text-sm text-dark/70">
+                {sec.textoMaisDuvidasMobile}{" "}
+                <a
+                  href={buildWhatsAppUrl(
+                    contato.whatsapp.numero,
+                    contato.whatsapp.mensagemFaqExtra
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-wine underline"
+                >
+                  {sec.linkMaisDuvidas}
+                </a>
+              </p>
+            </div>
 
-          <div className="hidden md:block">
-            {faqDesktop.map((item, i) => (
-              <FaqItem
-                key={item.pergunta}
-                item={item}
-                isOpen={openIndex === i}
-                onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              />
-            ))}
+            <div className="hidden md:block">
+              {faqDesktop.map((item, i) => (
+                <FaqItem
+                  key={item.pergunta}
+                  item={item}
+                  isOpen={openIndex === i}
+                  onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        </MotionReveal>
 
         <div className="mt-10 hidden text-center md:block">
-          <p className="mb-4 text-dark/60">{sec.textoRodapeDesktop}</p>
-          <WhatsAppButton mensagem={contato.whatsapp.mensagemFaq}>
+          <p className="mb-4 text-dark/65">{sec.textoRodapeDesktop}</p>
+          <WhatsAppButton
+            mensagem={contato.whatsapp.mensagemFaq}
+            variant="primary"
+          >
             <MessageCircle size={18} />
             {sec.cta}
           </WhatsAppButton>
@@ -85,7 +91,13 @@ function FaqItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-wine/10 bg-white">
+    <div
+      className={`overflow-hidden rounded-xl border transition-colors ${
+        isOpen
+          ? "border-wine/30 bg-wine/5 shadow-md shadow-wine/5"
+          : "border-wine/10 bg-white"
+      }`}
+    >
       <button
         type="button"
         onClick={onToggle}
@@ -105,7 +117,7 @@ function FaqItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 pb-4 text-sm leading-relaxed text-dark/60">
+          <p className="border-t border-wine/10 px-5 pb-4 pt-2 text-sm leading-relaxed text-dark/65">
             {item.resposta}
           </p>
         </div>

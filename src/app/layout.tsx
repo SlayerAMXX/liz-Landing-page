@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { getSiteUrl } from "@/lib/get-site-url";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 const { seo, site } = siteConfig;
 const siteUrl = getSiteUrl();
@@ -28,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className="antialiased">{children}</body>
+    <html lang="pt-BR" className={`${playfair.variable} ${dmSans.variable}`}>
+      <body className="antialiased bg-mesh-cream">{children}</body>
     </html>
   );
 }

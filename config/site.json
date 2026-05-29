@@ -5,7 +5,7 @@
   "site": {
     "nome": "Lizaviê Financial Management",
     "tagline": "Financial Management",
-    "url": "http://localhost:3000"
+    "url": "https://liz-landing-page-gpnl.vercel.app"
   },
 
   "contato": {
