@@ -11,7 +11,7 @@ export default function Hero() {
   const { hero, estatisticas, imagens } = siteConfig;
 
   return (
-    <section className="relative overflow-hidden border-b border-wine/20 pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className="relative overflow-hidden border-b border-wine/20 pt-36 pb-16 md:pt-44 md:pb-24">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-wine/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-gold/20 blur-3xl" />
 
