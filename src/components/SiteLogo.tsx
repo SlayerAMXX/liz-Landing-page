@@ -12,12 +12,14 @@ type SiteLogoProps = {
 /** Caixa de exibição + imagem maior com scale para compensar margem interna do PNG */
 const variants = {
   navbar: {
-    box: "h-[4.25rem] w-[4.25rem] sm:h-20 sm:w-20 md:h-32 md:w-32",
-    img: "h-24 w-24 sm:h-28 sm:w-28 md:h-40 md:w-40 scale-[1.14]",
+    // Mantém o layout do nav compacto (caixa pequena),
+    // mas aumenta a logo via transform (não altera a altura do header).
+    box: "h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16",
+    img: "h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 scale-[1.35]",
   },
   footer: {
-    box: "h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36",
-    img: "h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 scale-[1.12] brightness-0 invert",
+    box: "h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20",
+    img: "h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 scale-[1.3] brightness-0 invert",
   },
 };
 

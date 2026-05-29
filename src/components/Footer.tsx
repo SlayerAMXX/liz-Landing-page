@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       id="contato"
-      className="border-t-2 border-gold/30 bg-dark py-8 md:border-t-4 md:py-12"
+      className="border-t-2 border-gold/30 bg-dark py-6 md:border-t-4 md:py-10"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <MotionReveal>
