@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
-import WhatsAppButton, { NavLink } from "./WhatsAppButton";
+import { NavLink } from "./WhatsAppButton";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -31,12 +31,6 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <WhatsAppButton
-            mensagem={siteConfig.contato.whatsapp.mensagemConsultoria}
-            className="px-5 py-2.5 text-sm"
-          >
-            {navegacao.ctaNav}
-          </WhatsAppButton>
         </nav>
 
         <button
@@ -57,12 +51,6 @@ export default function Navbar() {
                 <span onClick={() => setOpen(false)}>{link.label}</span>
               </NavLink>
             ))}
-            <WhatsAppButton
-              mensagem={siteConfig.contato.whatsapp.mensagemConsultoria}
-              className="w-full"
-            >
-              {navegacao.ctaNav}
-            </WhatsAppButton>
           </div>
         </nav>
       )}

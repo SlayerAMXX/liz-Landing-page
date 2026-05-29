@@ -32,27 +32,20 @@ export default function Hero() {
             {hero.subtituloDesktop}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-3">
             <WhatsAppButton
-              mensagem={siteConfig.contato.whatsapp.mensagemConsultoria}
-              className="md:hidden"
+              mensagem={siteConfig.ctaPrincipal.mensagem}
+              className="w-full px-8 py-4 text-base sm:w-auto"
             >
-              <MessageCircle size={18} />
-              {hero.ctaMobile}
-            </WhatsAppButton>
-            <WhatsAppButton
-              mensagem={siteConfig.contato.whatsapp.mensagemConsultoria}
-              className="hidden md:inline-flex"
-            >
-              <MessageCircle size={18} />
-              {hero.ctaDesktop}
+              <MessageCircle size={20} />
+              {siteConfig.ctaPrincipal.texto}
             </WhatsAppButton>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold/40 bg-dark-elevated/80 px-6 py-3 text-sm font-semibold text-gold backdrop-blur-sm transition-colors hover:border-gold hover:bg-gold hover:text-dark"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/30 px-6 py-2.5 text-sm font-medium text-cream/70 transition-colors hover:border-gold/50 hover:text-gold sm:w-auto"
             >
               {hero.ctaSecundario}
-              <ArrowDown size={16} />
+              <ArrowDown size={14} />
             </a>
           </div>
 

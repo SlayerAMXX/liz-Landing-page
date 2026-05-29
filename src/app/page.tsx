@@ -6,13 +6,12 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import StickyWhatsApp from "@/components/StickyWhatsApp";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pb-16 md:pb-0">
+      <main>
         <Hero />
         <Benefits />
         <HowItWorks />
@@ -21,7 +20,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-      <StickyWhatsApp />
     </>
   );
 }

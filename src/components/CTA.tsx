@@ -1,8 +1,7 @@
-import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
-import WhatsAppButton from "./WhatsAppButton";
 import MotionReveal from "./MotionReveal";
 
+/** Seção de reforço visual — o único botão de WhatsApp fica no Hero */
 export default function CTA() {
   const { secoes } = siteConfig;
   const sec = secoes.cta;
@@ -10,13 +9,8 @@ export default function CTA() {
   return (
     <section
       id="contato"
-      className="relative overflow-hidden bg-mesh-wine py-16 md:py-24"
+      className="relative overflow-hidden bg-mesh-wine py-12 md:py-16"
     >
-      <div className="pointer-events-none absolute inset-0 opacity-20">
-        <div className="absolute left-1/4 top-0 h-64 w-64 rounded-full bg-gold blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-48 w-48 rounded-full bg-wine-light blur-3xl" />
-      </div>
-
       <div className="relative mx-auto max-w-3xl px-4 text-center md:px-6">
         <MotionReveal>
           <span className="mb-4 inline-block rounded-full border border-gold/40 bg-gold/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold">
@@ -24,7 +18,7 @@ export default function CTA() {
           </span>
           <div className="gold-divider mb-6" />
 
-          <h2 className="font-serif text-3xl font-bold text-cream md:text-5xl">
+          <h2 className="font-serif text-2xl font-bold text-cream md:text-4xl">
             <span className="md:hidden">
               {sec.tituloMobileInicio}
               <span className="text-gold">{sec.tituloDestaque}</span>
@@ -37,20 +31,11 @@ export default function CTA() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cream/80 md:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-cream/75 md:text-base">
             {sec.descricaoDesktop}
           </p>
 
-          <WhatsAppButton
-            mensagem={siteConfig.contato.whatsapp.mensagemConsultoria}
-            variant="gold"
-            className="mt-8 px-8 py-4 text-base"
-          >
-            <MessageCircle size={18} />
-            {sec.botao}
-          </WhatsAppButton>
-
-          <p className="mt-5 text-sm text-cream/55">{sec.rodape}</p>
+          <p className="mt-4 text-xs text-cream/50 md:text-sm">{sec.rodape}</p>
         </MotionReveal>
       </div>
     </section>

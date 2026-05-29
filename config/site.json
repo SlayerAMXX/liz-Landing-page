@@ -47,8 +47,12 @@
     "imagemCompartilhamento": "/img/equipe.jpg"
   },
 
+  "ctaPrincipal": {
+    "texto": "Quero minha consultoria gratuita agora",
+    "mensagem": "Olá! Quero agendar minha consultoria gratuita na Lizaviê."
+  },
+
   "navegacao": {
-    "ctaNav": "Consultoria Gratuita",
     "links": [
       { "label": "Serviços", "href": "#servicos" },
       { "label": "Como Funciona", "href": "#como-funciona" },
@@ -64,8 +68,6 @@
     "headlineFim": "financeira.",
     "subtituloMobile": "Consultoria gratuita para limpar seu nome e recuperar crédito.",
     "subtituloDesktop": "Especialistas em limpeza de nome, recuperação de crédito e consultoria financeira premium. Sua jornada para a estabilidade começa aqui.",
-    "ctaMobile": "Consultoria Gratuita",
-    "ctaDesktop": "Fale Conosco no WhatsApp",
     "ctaSecundario": "Conheça nossos serviços",
     "provaSocialMobile": "+500 clientes · 98% de sucesso",
     "imagemEquipe": {
@@ -134,18 +136,12 @@
       "tituloMobileFim": "?",
       "tituloDesktopFim": " está a um clique de distância",
       "descricaoDesktop": "Agende uma consultoria exclusiva e descubra como podemos transformar sua situação financeira com discrição e excelência.",
-      "botao": "Agendar Consultoria Gratuita",
       "rodape": "Atendimento confidencial · Resposta em até 24h"
     }
   },
 
   "ui": {
     "whatsappAriaLabel": "Fale conosco no WhatsApp"
-  },
-
-  "botoes": {
-    "stickyMobile": "Consultoria Gratuita — Fale Agora",
-    "stickyMensagem": "Olá! Quero agendar minha consultoria gratuita na Lizaviê."
   },
 
   "footer": {

@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, MessageCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import SectionHeader from "./SectionHeader";
-import WhatsAppButton from "./WhatsAppButton";
 import MotionReveal from "./MotionReveal";
 
 export default function FAQ() {
@@ -66,16 +65,9 @@ export default function FAQ() {
           </div>
         </MotionReveal>
 
-        <div className="mt-10 hidden text-center md:block">
-          <p className="mb-4 text-cream/65">{sec.textoRodapeDesktop}</p>
-          <WhatsAppButton
-            mensagem={contato.whatsapp.mensagemFaq}
-            variant="primary"
-          >
-            <MessageCircle size={18} />
-            {sec.cta}
-          </WhatsAppButton>
-        </div>
+        <p className="mt-8 hidden text-center text-sm text-cream/60 md:block">
+          {sec.textoRodapeDesktop}
+        </p>
       </div>
     </section>
   );
