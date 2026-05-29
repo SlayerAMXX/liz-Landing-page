@@ -43,14 +43,19 @@ export default function WhatsAppButton({
 export function NavLink({
   href,
   children,
+  onClick,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
 }) {
   return (
     <Link
       href={href}
-      className="text-sm font-medium text-cream/75 transition-colors hover:text-gold"
+      onClick={onClick}
+      className={`text-sm font-medium text-cream/75 transition-colors hover:text-gold ${className}`}
     >
       {children}
     </Link>

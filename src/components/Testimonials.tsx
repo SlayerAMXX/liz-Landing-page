@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import SectionHeader from "./SectionHeader";
 import MotionReveal from "./MotionReveal";
+import ResponsiveText from "./ResponsiveText";
 
 export default function Testimonials() {
   const { secoes, depoimentos } = siteConfig;
@@ -17,28 +18,32 @@ export default function Testimonials() {
       className="border-y border-wine/20 bg-dark py-16 md:py-24"
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <SectionHeader
-          badge={sec.badge}
-          titulo={sec.titulo}
-          tituloDestaque={sec.tituloDestaque}
-          descricao={sec.descricaoDesktop}
-        />
+        <MotionReveal>
+          <SectionHeader
+            badge={sec.badge}
+            titulo={sec.titulo}
+            tituloDestaque={sec.tituloDestaque}
+            descricao={sec.descricaoDesktop}
+          />
+        </MotionReveal>
 
-        <div className="mb-10 flex justify-center gap-8 rounded-2xl border border-wine/25 bg-dark-elevated py-6 md:mb-14">
-          {sec.estatisticas.map((stat) => (
-            <div key={stat.label} className="px-4 text-center">
-              <p className="font-serif text-2xl font-bold text-gold md:text-3xl">
-                {stat.valor}
-              </p>
-              <p className="text-xs font-medium text-cream/60 md:text-sm">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <MotionReveal delay={0.1}>
+          <div className="mb-10 flex justify-center gap-4 rounded-2xl border border-wine/25 bg-dark-elevated py-5 sm:gap-8 md:mb-14">
+            {sec.estatisticas.map((stat) => (
+              <div key={stat.label} className="px-2 text-center sm:px-4">
+                <p className="font-serif text-xl font-bold text-gold sm:text-2xl md:text-3xl">
+                  {stat.valor}
+                </p>
+                <p className="text-[10px] font-medium text-cream/60 sm:text-xs md:text-sm">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </MotionReveal>
 
         {destaque && (
-          <MotionReveal>
+          <MotionReveal delay={0.15}>
             <article className="mb-8 rounded-2xl border-2 border-gold/40 bg-dark-elevated p-6 shadow-xl shadow-wine/20 md:p-8">
               <div className="mb-4 flex items-center justify-between">
                 <span className="rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gold">
@@ -52,10 +57,10 @@ export default function Testimonials() {
               </div>
               <blockquote className="border-l-4 border-gold/40 pl-4 font-serif text-lg leading-relaxed text-cream md:text-xl">
                 &ldquo;
-                <span className="md:hidden">{destaque.textoResumo}</span>
-                <span className="hidden md:inline">
-                  {destaque.textoCompleto}
-                </span>
+                <ResponsiveText
+                  mobile={destaque.textoResumo}
+                  desktop={destaque.textoCompleto}
+                />
                 &rdquo;
               </blockquote>
               <footer className="mt-6 flex items-center gap-4">
@@ -76,8 +81,8 @@ export default function Testimonials() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {outros.map((dep, i) => (
-            <MotionReveal key={dep.nome} delay={i * 0.08}>
-              <article className="card-premium h-full rounded-2xl p-5 transition-all hover:-translate-y-0.5">
+            <MotionReveal key={dep.nome} delay={0.1 + i * 0.08} direction="up">
+              <article className="card-premium h-full rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40">
                 <div className="mb-3 flex gap-0.5 text-gold">
                   {Array.from({ length: dep.avaliacao }).map((_, j) => (
                     <Star key={j} size={14} fill="currentColor" />
@@ -85,8 +90,10 @@ export default function Testimonials() {
                 </div>
                 <blockquote className="text-sm leading-relaxed text-cream/80">
                   &ldquo;
-                  <span className="md:hidden">{dep.textoResumo}</span>
-                  <span className="hidden md:inline">{dep.textoCompleto}</span>
+                  <ResponsiveText
+                    mobile={dep.textoResumo}
+                    desktop={dep.textoCompleto}
+                  />
                   &rdquo;
                 </blockquote>
                 <footer className="mt-4 flex items-center gap-3 border-t border-wine/25 pt-4">
