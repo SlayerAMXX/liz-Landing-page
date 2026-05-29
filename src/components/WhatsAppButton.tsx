@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import { siteConfig } from "@/lib/site-config";
 
 type WhatsAppButtonProps = {
+  numero: string;
+  mensagemPadrao: string;
+  ariaLabel: string;
   mensagem?: string;
   children: React.ReactNode;
   className?: string;
@@ -19,12 +21,14 @@ const variants = {
 };
 
 export default function WhatsAppButton({
+  numero,
+  mensagemPadrao,
+  ariaLabel,
   mensagem,
   children,
   className = "",
   variant = "primary",
 }: WhatsAppButtonProps) {
-  const { numero, mensagemPadrao } = siteConfig.contato.whatsapp;
   const href = buildWhatsAppUrl(numero, mensagem ?? mensagemPadrao);
 
   return (
@@ -32,7 +36,7 @@ export default function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={siteConfig.ui.whatsappAriaLabel}
+      aria-label={ariaLabel}
       className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${variants[variant]} ${className}`}
     >
       {children}

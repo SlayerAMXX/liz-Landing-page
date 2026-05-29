@@ -3,14 +3,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import SectionHeader from "./SectionHeader";
 import MotionReveal from "./MotionReveal";
+import type { SiteConfig } from "@/lib/site-config";
 
-export default function FAQ() {
-  const { secoes, faq, contato } = siteConfig;
-  const sec = secoes.faq;
+type FAQProps = {
+  secao: SiteConfig["secoes"]["faq"];
+  faq: SiteConfig["faq"];
+  whatsappNumero: string;
+  whatsappMensagemFaqExtra: string;
+};
+
+export default function FAQ({
+  secao: sec,
+  faq,
+  whatsappNumero,
+  whatsappMensagemFaqExtra,
+}: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -67,10 +77,7 @@ export default function FAQ() {
           <span className="md:hidden">
             {sec.textoMaisDuvidasMobile}{" "}
             <a
-              href={buildWhatsAppUrl(
-                contato.whatsapp.numero,
-                contato.whatsapp.mensagemFaqExtra
-              )}
+              href={buildWhatsAppUrl(whatsappNumero, whatsappMensagemFaqExtra)}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-gold underline"

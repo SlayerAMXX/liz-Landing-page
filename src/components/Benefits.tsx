@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config.server";
 import { getServiceIcon } from "@/lib/icons";
 import SectionHeader from "./SectionHeader";
 import MotionReveal from "./MotionReveal";

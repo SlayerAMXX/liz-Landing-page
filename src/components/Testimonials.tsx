@@ -1,14 +1,17 @@
 "use client";
 
 import { Star } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
 import SectionHeader from "./SectionHeader";
 import MotionReveal from "./MotionReveal";
 import ResponsiveText from "./ResponsiveText";
+import type { SiteConfig } from "@/lib/site-config";
 
-export default function Testimonials() {
-  const { secoes, depoimentos } = siteConfig;
-  const sec = secoes.depoimentos;
+type TestimonialsProps = {
+  secao: SiteConfig["secoes"]["depoimentos"];
+  depoimentos: SiteConfig["depoimentos"];
+};
+
+export default function Testimonials({ secao: sec, depoimentos }: TestimonialsProps) {
   const destaque = depoimentos.find((d) => d.destaque);
   const outros = depoimentos.filter((d) => !d.destaque);
 

@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config.server";
 import MotionReveal from "./MotionReveal";
 
 export default function CTA() {

@@ -12,7 +12,7 @@
     "whatsapp": {
       "numero": "5511999999999",
       "mensagemPadrao": "Olá! Gostaria de saber mais sobre os serviços da Lizaviê Financial Management.",
-      "mensagemConsultoria": "Olá! Quero agendar minha consultoria gratuita.",
+      "mensagemConsultoria": "Olá! Gostaria de falar com um especialista sobre meu caso.",
       "mensagemFaq": "Olá! Tenho uma dúvida sobre os serviços da Lizaviê.",
       "mensagemFaqExtra": "Olá! Tenho outra dúvida sobre os serviços."
     },
@@ -48,8 +48,8 @@
   },
 
   "ctaPrincipal": {
-    "texto": "Quero minha consultoria gratuita agora",
-    "mensagem": "Olá! Quero agendar minha consultoria gratuita na Lizaviê."
+    "texto": "Falar com um especialista agora",
+    "mensagem": "Olá! Gostaria de uma avaliação da minha situação financeira na Lizaviê."
   },
 
   "navegacao": {
@@ -66,7 +66,7 @@
     "headlineInicio": "Recupere seu crédito e",
     "headlineDestaque": "volte a ter liberdade",
     "headlineFim": "financeira.",
-    "subtituloMobile": "Consultoria gratuita para limpar seu nome e recuperar crédito.",
+    "subtituloMobile": "Limpeza de nome e recuperação de crédito com atendimento personalizado e transparente.",
     "subtituloDesktop": "Especialistas em limpeza de nome, recuperação de crédito e consultoria financeira premium. Sua jornada para a estabilidade começa aqui.",
     "ctaSecundario": "Conheça nossos serviços",
     "provaSocialMobile": "+500 clientes · 98% de sucesso",
@@ -135,7 +135,7 @@
       "tituloDestaque": "liberdade financeira",
       "tituloMobileFim": "?",
       "tituloDesktopFim": " está a um clique de distância",
-      "descricaoDesktop": "Agende uma consultoria exclusiva e descubra como podemos transformar sua situação financeira com discrição e excelência.",
+      "descricaoDesktop": "Fale com nossa equipe, entenda as opções para o seu caso e receba um plano claro — com discrição e excelência.",
       "rodape": "Atendimento confidencial · Resposta em até 24h"
     }
   },
@@ -264,7 +264,7 @@
     },
     {
       "pergunta": "Quanto custa o serviço?",
-      "resposta": "Cada caso é único, por isso oferecemos uma consultoria gratuita para avaliar sua situação e apresentar um plano com valores transparentes. Não cobramos taxas ocultas — você sabe exatamente o que está contratando antes de iniciar."
+      "resposta": "Cada caso é único e os valores dependem da complexidade do atendimento. Após a avaliação do seu perfil, apresentamos um plano com preços transparentes, sem taxas ocultas. Você só contrata depois de entender e aprovar a proposta."
     },
     {
       "pergunta": "Vocês atendem pessoa jurídica (CNPJ)?",

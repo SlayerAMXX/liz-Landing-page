@@ -1,4 +1,4 @@
-import { siteConfig } from "./site-config";
+import { siteConfig } from "./site-config.server";
 
 export function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {

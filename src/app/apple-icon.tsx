@@ -2,13 +2,13 @@ import { ImageResponse } from "next/og";
 import { brandIconBackground, getBrandLogoDataUrl } from "@/lib/brand-icon";
 
 export const size = {
-  width: 32,
-  height: 32,
+  width: 180,
+  height: 180,
 };
 
 export const contentType = "image/png";
 
-export default async function Icon() {
+export default async function AppleIcon() {
   const logoSrc = await getBrandLogoDataUrl();
 
   return new ImageResponse(
@@ -23,7 +23,7 @@ export default async function Icon() {
           background: brandIconBackground,
         }}
       >
-        <img src={logoSrc} width={28} height={28} alt="" />
+        <img src={logoSrc} width={156} height={156} alt="" />
       </div>
     ),
     size

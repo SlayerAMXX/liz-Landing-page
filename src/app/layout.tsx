@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config.server";
 import { getSiteUrl } from "@/lib/get-site-url";
 import "./globals.css";
 

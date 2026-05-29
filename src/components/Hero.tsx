@@ -2,14 +2,28 @@
 
 import Image from "next/image";
 import { ArrowDown, MessageCircle } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
 import WhatsAppButton from "./WhatsAppButton";
 import MotionReveal from "./MotionReveal";
 import ResponsiveText from "./ResponsiveText";
+import type { SiteConfig } from "@/lib/site-config";
 
-export default function Hero() {
-  const { hero, estatisticas, imagens } = siteConfig;
+type HeroProps = {
+  hero: SiteConfig["hero"];
+  estatisticas: SiteConfig["estatisticas"];
+  imagens: SiteConfig["imagens"];
+  ctaPrincipal: SiteConfig["ctaPrincipal"];
+  whatsapp: SiteConfig["contato"]["whatsapp"];
+  whatsappAriaLabel: string;
+};
 
+export default function Hero({
+  hero,
+  estatisticas,
+  imagens,
+  ctaPrincipal,
+  whatsapp,
+  whatsappAriaLabel,
+}: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-wine/20 pt-36 pb-16 md:pt-44 md:pb-24">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-wine/15 blur-3xl" />
@@ -35,11 +49,14 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3">
             <WhatsAppButton
-              mensagem={siteConfig.ctaPrincipal.mensagem}
+              numero={whatsapp.numero}
+              mensagemPadrao={whatsapp.mensagemPadrao}
+              ariaLabel={whatsappAriaLabel}
+              mensagem={ctaPrincipal.mensagem}
               className="w-full px-8 py-4 text-base transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
             >
               <MessageCircle size={20} />
-              {siteConfig.ctaPrincipal.texto}
+              {ctaPrincipal.texto}
             </WhatsAppButton>
             <a
               href="#servicos"
