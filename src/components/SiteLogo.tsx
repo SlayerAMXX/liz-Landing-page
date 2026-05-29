@@ -10,8 +10,9 @@ type SiteLogoProps = {
 };
 
 const variantClasses = {
-  navbar: "h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16",
-  footer: "h-14 w-14 brightness-0 invert md:h-[4.5rem] md:w-[4.5rem]",
+  navbar: "h-[4.25rem] w-[4.25rem] sm:h-[4.75rem] sm:w-[4.75rem] md:h-24 md:w-24",
+  footer:
+    "h-20 w-20 brightness-0 invert sm:h-[5.5rem] sm:w-[5.5rem] md:h-28 md:w-28",
 };
 
 export default function SiteLogo({

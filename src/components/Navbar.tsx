@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-wine/30 bg-dark/95 shadow-lg shadow-black/30 backdrop-blur-md">
       <div className="h-1 bg-gradient-to-r from-wine via-gold to-wine" />
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6 md:py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 md:px-6 md:py-3">
         <a href="#" className="flex shrink-0 items-center transition-opacity hover:opacity-90">
           <SiteLogo variant="navbar" priority />
         </a>
