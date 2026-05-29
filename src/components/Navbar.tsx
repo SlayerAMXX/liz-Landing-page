@@ -22,14 +22,14 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-wine/30 bg-dark/95 shadow-lg shadow-black/30 backdrop-blur-md">
       <div className="h-1 bg-gradient-to-r from-wine via-gold to-wine" />
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6 md:py-4">
         <a href="#" className="flex items-center gap-2 transition-opacity hover:opacity-90">
           <Image
             src={imagens.logo}
             alt={site.nome}
-            width={140}
-            height={48}
-            className="h-10 w-auto md:h-12"
+            width={200}
+            height={72}
+            className="h-12 w-auto min-w-[120px] sm:h-14 md:h-16"
             priority
           />
         </a>

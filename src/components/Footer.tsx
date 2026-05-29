@@ -20,9 +20,9 @@ export default function Footer() {
               <Image
                 src={imagens.logo}
                 alt={site.nome}
-                width={140}
-                height={48}
-                className="mb-3 h-8 w-auto brightness-0 invert md:mb-4 md:h-10"
+                width={200}
+                height={72}
+                className="mb-3 h-12 w-auto min-w-[140px] brightness-0 invert md:mb-4 md:h-14"
               />
               <p className="max-w-xs text-xs leading-relaxed text-cream/55 md:max-w-none md:text-sm">
                 {footer.descricao}
