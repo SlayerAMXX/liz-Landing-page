@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wine: #6b0000;
+  --color-wine-dark: #4a0000;
+  --color-gold: #d9c08a;
+  --color-gold-light: #e8d7b0;
+  --color-dark: #111111;
+  --color-cream: #f5f1e8;
+  --font-serif: "Georgia", "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+}
