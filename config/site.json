@@ -1,0 +1,286 @@
+{
+  "$schema": "./site.schema.json",
+  "_comentario": "Edite este arquivo para alterar textos, contatos e conteúdo do site. Salve e recarregue a página (npm run dev).",
+
+  "site": {
+    "nome": "Lizaviê Financial Management",
+    "tagline": "Financial Management",
+    "url": "http://localhost:3000"
+  },
+
+  "contato": {
+    "whatsapp": {
+      "numero": "5511999999999",
+      "mensagemPadrao": "Olá! Gostaria de saber mais sobre os serviços da Lizaviê Financial Management.",
+      "mensagemConsultoria": "Olá! Quero agendar minha consultoria gratuita.",
+      "mensagemFaq": "Olá! Tenho uma dúvida sobre os serviços da Lizaviê.",
+      "mensagemFaqExtra": "Olá! Tenho outra dúvida sobre os serviços."
+    },
+    "telefone": {
+      "numero": "+5511999999999",
+      "exibicao": "(11) 99999-9999"
+    },
+    "email": "contato@lizavie.com.br",
+    "instagram": {
+      "url": "https://instagram.com/lizavie.financial",
+      "usuario": "@lizavie.financial"
+    },
+    "cnpj": "00.000.000/0001-00"
+  },
+
+  "imagens": {
+    "logo": "/img/logo-semfundo.png",
+    "equipe": "/img/equipe.jpg",
+    "ceo": "/img/CEO.jpg"
+  },
+
+  "seo": {
+    "titulo": "Lizaviê Financial Management | Recuperação de Crédito Premium",
+    "descricao": "Especialistas em limpeza de nome, recuperação de crédito, negociação de dívidas e consultoria financeira de alto padrão. Recupere seu crédito e volte a ter liberdade financeira.",
+    "palavrasChave": [
+      "limpeza de nome",
+      "recuperação de crédito",
+      "negociação de dívidas",
+      "consultoria financeira",
+      "Lizaviê"
+    ],
+    "imagemCompartilhamento": "/img/equipe.jpg"
+  },
+
+  "navegacao": {
+    "ctaNav": "Consultoria Gratuita",
+    "links": [
+      { "label": "Serviços", "href": "#servicos" },
+      { "label": "Como Funciona", "href": "#como-funciona" },
+      { "label": "Depoimentos", "href": "#depoimentos" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Contato", "href": "#contato" }
+    ]
+  },
+
+  "hero": {
+    "headlineInicio": "Recupere seu crédito e",
+    "headlineDestaque": "volte a ter liberdade",
+    "headlineFim": "financeira.",
+    "subtituloMobile": "Consultoria gratuita para limpar seu nome e recuperar crédito.",
+    "subtituloDesktop": "Especialistas em limpeza de nome, recuperação de crédito e consultoria financeira premium. Sua jornada para a estabilidade começa aqui.",
+    "ctaMobile": "Consultoria Gratuita",
+    "ctaDesktop": "Fale Conosco no WhatsApp",
+    "ctaSecundario": "Conheça nossos serviços",
+    "provaSocialMobile": "+500 clientes · 98% de sucesso",
+    "imagemEquipe": {
+      "badge": "+500 clientes atendidos",
+      "titulo": "Consultoria de Alto Padrão"
+    },
+    "cardExcelencia": {
+      "badge": "Excelência",
+      "titulo": "Consultoria de Alto Padrão"
+    }
+  },
+
+  "estatisticas": [
+    { "valor": "+500", "label": "Clientes atendidos", "labelMobile": "Clientes" },
+    { "valor": "98%", "label": "Taxa de sucesso", "labelMobile": "Sucesso" },
+    { "valor": "10+", "label": "Anos de experiência", "labelMobile": "Anos" }
+  ],
+
+  "secoes": {
+    "servicos": {
+      "badge": "Nossos Serviços",
+      "titulo": "Soluções",
+      "tituloDestaque": "Exclusivas",
+      "descricaoDesktop": "Oferecemos serviços premium de gestão financeira com atendimento personalizado e resultados comprovados.",
+      "tagsMobile": "Limpeza de nome · Crédito · Dívidas · Consultoria"
+    },
+    "comoFunciona": {
+      "badge": "Processo",
+      "titulo": "Como",
+      "tituloDestaque": "Funciona",
+      "descricaoDesktop": "Um processo transparente e eficiente, conduzido por especialistas que cuidam de cada detalhe da sua recuperação financeira.",
+      "imagemCeo": {
+        "badge": "Liderança",
+        "titulo": "Expertise que Transforma",
+        "descricao": "Anos de experiência em recuperação financeira e consultoria de alto padrão."
+      }
+    },
+    "depoimentos": {
+      "badge": "Depoimentos",
+      "titulo": "Resultados",
+      "tituloDestaque": "Reais",
+      "labelDestaque": "Destaque",
+      "descricaoDesktop": "Histórias reais de transformação financeira conduzidas pela excelência Lizaviê.",
+      "estatisticas": [
+        { "valor": "4.9★", "label": "Avaliação" },
+        { "valor": "+500", "label": "Clientes" },
+        { "valor": "98%", "label": "Recomendam" }
+      ]
+    },
+    "faq": {
+      "badge": "Dúvidas Frequentes",
+      "titulo": "Perguntas",
+      "tituloDestaque": "Frequentes",
+      "descricaoDesktop": "Tire suas dúvidas sobre nossos serviços. Se não encontrar o que procura, fale conosco diretamente.",
+      "quantidadeMobile": 4,
+      "textoMaisDuvidasMobile": "Mais dúvidas?",
+      "linkMaisDuvidas": "Fale conosco",
+      "textoRodapeDesktop": "Ainda tem dúvidas? Nossa equipe está pronta para ajudar.",
+      "cta": "Falar com um especialista"
+    },
+    "cta": {
+      "badge": "Comece Agora",
+      "tituloMobileInicio": "Pronto para ",
+      "titulo": "Sua",
+      "tituloDestaque": "liberdade financeira",
+      "tituloMobileFim": "?",
+      "tituloDesktopFim": " está a um clique de distância",
+      "descricaoDesktop": "Agende uma consultoria exclusiva e descubra como podemos transformar sua situação financeira com discrição e excelência.",
+      "botao": "Agendar Consultoria Gratuita",
+      "rodape": "Atendimento confidencial · Resposta em até 24h"
+    }
+  },
+
+  "ui": {
+    "whatsappAriaLabel": "Fale conosco no WhatsApp"
+  },
+
+  "botoes": {
+    "stickyMobile": "Consultoria Gratuita — Fale Agora",
+    "stickyMensagem": "Olá! Quero agendar minha consultoria gratuita na Lizaviê."
+  },
+
+  "footer": {
+    "descricao": "Consultoria financeira premium especializada em recuperação de crédito e gestão patrimonial.",
+    "colunaServicos": "Serviços",
+    "colunaEmpresa": "Empresa",
+    "colunaContato": "Contato",
+    "copyright": "Lizaviê Financial Management. Todos os direitos reservados."
+  },
+
+  "servicos": [
+    {
+      "icone": "ShieldCheck",
+      "titulo": "Limpeza de Nome",
+      "resumoMobile": "CPF e CNPJ regularizados com estratégia personalizada.",
+      "descricao": "Regularizamos seu CPF e CNPJ com estratégias personalizadas para restaurar sua reputação financeira."
+    },
+    {
+      "icone": "TrendingUp",
+      "titulo": "Recuperação de Crédito",
+      "resumoMobile": "Score reconstruído e crédito liberado novamente.",
+      "descricao": "Reconstruímos seu score e ampliamos suas possibilidades de crédito com planos sob medida."
+    },
+    {
+      "icone": "Handshake",
+      "titulo": "Negociação de Dívidas",
+      "resumoMobile": "Redução de valores e parcelas que cabem no bolso.",
+      "descricao": "Negociamos diretamente com credores para reduzir valores e criar condições de pagamento viáveis."
+    },
+    {
+      "icone": "Briefcase",
+      "titulo": "Consultoria Financeira",
+      "resumoMobile": "Plano exclusivo para estabilidade financeira.",
+      "descricao": "Orientação estratégica exclusiva para reorganizar suas finanças e alcançar estabilidade duradoura."
+    }
+  ],
+
+  "passos": [
+    {
+      "numero": "01",
+      "tituloMobile": "Diagnóstico",
+      "tituloCompleto": "Diagnóstico Completo",
+      "descricao": "Analisamos sua situação financeira com precisão e confidencialidade absoluta."
+    },
+    {
+      "numero": "02",
+      "tituloMobile": "Plano Exclusivo",
+      "tituloCompleto": "Plano Personalizado",
+      "descricao": "Elaboramos uma estratégia exclusiva alinhada aos seus objetivos e realidade."
+    },
+    {
+      "numero": "03",
+      "tituloMobile": "Execução",
+      "tituloCompleto": "Execução Estratégica",
+      "descricao": "Nossa equipe especializada conduz todas as negociações e processos em seu nome."
+    },
+    {
+      "numero": "04",
+      "tituloMobile": "Resultados",
+      "tituloCompleto": "Resultados Comprovados",
+      "descricao": "Acompanhamos cada etapa até a conquista da sua liberdade financeira."
+    }
+  ],
+
+  "depoimentos": [
+    {
+      "nome": "Mariana Silva",
+      "cargo": "Empresária · São Paulo",
+      "servico": "Limpeza de Nome",
+      "resultado": "Nome limpo em 45 dias",
+      "textoCompleto": "Estava com o CPF restrito há 3 anos e não conseguia crédito para expandir meu negócio. A Lizaviê conduziu todo o processo com discrição e profissionalismo. Hoje tenho score acima de 700 e voltei a investir no meu empreendimento.",
+      "textoResumo": "Limpei meu nome em 45 dias e voltei a ter crédito para expandir meu negócio.",
+      "avaliacao": 5,
+      "destaque": true,
+      "iniciais": "MS"
+    },
+    {
+      "nome": "Carlos Rodrigues",
+      "cargo": "Executivo · Rio de Janeiro",
+      "servico": "Negociação de Dívidas",
+      "resultado": "Redução de 62% nas dívidas",
+      "textoCompleto": "Tinha mais de R$ 80 mil em dívidas acumuladas. A equipe negociou condições que eu jamais conseguiria sozinho. O acompanhamento foi impecável do início ao fim.",
+      "textoResumo": "Reduzi 62% das minhas dívidas com negociação profissional.",
+      "avaliacao": 5,
+      "destaque": false,
+      "iniciais": "CR"
+    },
+    {
+      "nome": "Ana Paula Mendes",
+      "cargo": "Profissional Liberal · Belo Horizonte",
+      "servico": "Consultoria Financeira",
+      "resultado": "Score recuperado em 90 dias",
+      "textoCompleto": "A consultoria me deu clareza total sobre minha situação financeira. Montaram um plano personalizado e hoje tenho reserva de emergência e crédito disponível novamente.",
+      "textoResumo": "Recuperei meu score e voltei a ter crédito em 90 dias.",
+      "avaliacao": 5,
+      "destaque": false,
+      "iniciais": "AM"
+    },
+    {
+      "nome": "Roberto Ferreira",
+      "cargo": "Comerciante · Curitiba",
+      "servico": "Recuperação de Crédito",
+      "resultado": "Crédito aprovado em 60 dias",
+      "textoCompleto": "Depois de anos negativado, achei que nunca mais teria acesso a financiamento. A Lizaviê não só limpou meu nome como me orientou a reconstruir meu histórico. Recomendo de olhos fechados.",
+      "textoResumo": "Crédito aprovado em 60 dias após anos negativado.",
+      "avaliacao": 5,
+      "destaque": false,
+      "iniciais": "RF"
+    }
+  ],
+
+  "faq": [
+    {
+      "pergunta": "Quanto tempo leva para limpar o nome?",
+      "resposta": "O prazo varia conforme a complexidade de cada caso, mas a maioria dos nossos clientes obtém resultados entre 30 e 90 dias. Após o diagnóstico inicial, apresentamos um cronograma personalizado com prazos realistas para a sua situação."
+    },
+    {
+      "pergunta": "Meus dados estão seguros?",
+      "resposta": "Sim. Tratamos todas as informações com confidencialidade absoluta, em conformidade com a LGPD. Seus dados são utilizados exclusivamente para a prestação dos nossos serviços e nunca são compartilhados com terceiros sem sua autorização."
+    },
+    {
+      "pergunta": "Quanto custa o serviço?",
+      "resposta": "Cada caso é único, por isso oferecemos uma consultoria gratuita para avaliar sua situação e apresentar um plano com valores transparentes. Não cobramos taxas ocultas — você sabe exatamente o que está contratando antes de iniciar."
+    },
+    {
+      "pergunta": "Vocês atendem pessoa jurídica (CNPJ)?",
+      "resposta": "Sim. Atendemos tanto pessoas físicas (CPF) quanto jurídicas (CNPJ). Para empresas, oferecemos serviços de regularização cadastral, renegociação de dívidas corporativas e consultoria para recuperação de crédito empresarial."
+    },
+    {
+      "pergunta": "Preciso ir presencialmente ao escritório?",
+      "resposta": "Não. Todo o atendimento pode ser feito de forma 100% online, via WhatsApp, videochamada ou e-mail. Priorizamos a comodidade e discrição dos nossos clientes, sem abrir mão da qualidade do serviço."
+    },
+    {
+      "pergunta": "A Lizaviê é um banco ou financeira?",
+      "resposta": "Não. Somos uma consultoria especializada em gestão financeira. Atuamos como intermediários estratégicos entre você e os credores, conduzindo negociações e processos de regularização com expertise e acompanhamento personalizado."
+    }
+  ]
+}

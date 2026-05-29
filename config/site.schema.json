@@ -1,0 +1,5 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lizaviê — Configuração do Site",
+  "description": "Arquivo de configuração para editar textos, contatos e conteúdo da landing page."
+}
