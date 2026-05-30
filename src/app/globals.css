@@ -108,3 +108,40 @@ body {
 .wa-pulse-ring-delay {
   animation-delay: 0.9s;
 }
+
+@keyframes hero-shimmer {
+  0% {
+    background-position: 120% center;
+  }
+  100% {
+    background-position: -20% center;
+  }
+}
+
+.hero-headline-shimmer {
+  background-image: linear-gradient(
+    105deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 38%,
+    #fff9eb 50%,
+    var(--color-gold-light) 62%,
+    var(--color-gold) 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-shimmer 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-headline-shimmer {
+    animation: none;
+    background-image: linear-gradient(
+      90deg,
+      var(--color-gold),
+      var(--color-gold-light)
+    );
+    background-size: 100% auto;
+  }
+}
