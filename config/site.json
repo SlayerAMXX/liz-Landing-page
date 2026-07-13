@@ -263,6 +263,7 @@
     "avisoPrivacidade": "Seus dados são tratados com confidencialidade, em conformidade com a LGPD. As informações são enviadas diretamente para nossa equipe via WhatsApp.",
     "botaoEnviar": "Enviar pelo WhatsApp",
     "botaoEnviando": "Abrindo WhatsApp...",
+    "servicosExcluidos": ["Limpeza de Nome"],
     "seo": {
       "titulo": "Anamnese Financeira | Lizaviê Financial Management",
       "descricao": "Preencha a anamnese financeira da Lizaviê e envie seus dados com segurança pelo WhatsApp para uma avaliação personalizada do seu caso."

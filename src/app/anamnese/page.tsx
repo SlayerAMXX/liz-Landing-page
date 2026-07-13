@@ -33,7 +33,9 @@ export default function AnamnesePage() {
             />
             <AnamneseForm
               anamnese={anamnese}
-              servicos={servicos}
+              servicos={servicos.filter(
+                (s) => !anamnese.servicosExcluidos.includes(s.titulo)
+              )}
               whatsappNumero={contato.whatsapp.numero}
               whatsappIntro={contato.whatsapp.mensagemAnamnese}
             />
