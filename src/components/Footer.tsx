@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Instagram, Mail, Phone } from "lucide-react";
 import SiteLogo from "./SiteLogo";
 import { siteConfig } from "@/lib/site-config.server";
@@ -36,12 +37,12 @@ export default function Footer() {
                 <ul className="space-y-1.5 md:space-y-2">
                   {servicos.map((s) => (
                     <li key={s.titulo}>
-                      <a
-                        href="#servicos"
+                      <Link
+                        href="/#servicos"
                         className="text-xs text-cream/60 transition-colors hover:text-gold md:text-sm"
                       >
                         {s.titulo}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -54,12 +55,12 @@ export default function Footer() {
                 <ul className="space-y-1.5 md:space-y-2">
                   {navegacao.links.map((link) => (
                     <li key={link.href}>
-                      <a
+                      <Link
                         href={link.href}
                         className="text-xs text-cream/60 transition-colors hover:text-gold md:text-sm"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

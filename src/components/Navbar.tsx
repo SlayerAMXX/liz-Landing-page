@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import SiteLogo from "./SiteLogo";
@@ -28,12 +29,12 @@ export default function Navbar({ links, logoSrc, logoAlt }: NavbarProps) {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-wine/30 bg-dark/95 shadow-lg shadow-black/30 backdrop-blur-md">
       <div className="h-1 bg-gradient-to-r from-wine via-gold to-wine" />
       <div className="mx-auto flex h-[3.75rem] max-w-6xl items-center justify-between gap-3 px-4 md:h-auto md:gap-4 md:px-6 md:py-2">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="relative z-10 flex min-w-0 shrink-0 items-center transition-opacity hover:opacity-90"
         >
           <SiteLogo variant="navbar" priority src={logoSrc} alt={logoAlt} />
-        </a>
+        </Link>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-8 md:flex">
           {links.map((link) => (

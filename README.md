@@ -51,6 +51,7 @@ Todo o conteúdo editável do site está em **`config/site.json`**. Abra esse ar
 | `servicos` | Cards de serviços (ícone, título, descrição) |
 | `passos` | Etapas do “Como funciona” |
 | `depoimentos` | Nome, cargo, texto e avaliação de cada cliente |
+| `anamnese` | Textos, campos e opções do formulário de anamnese |
 | `faq` | Perguntas e respostas |
 | `footer` | Textos do rodapé |
 | `imagens` | Caminhos das imagens em `public/img/` |
@@ -61,7 +62,11 @@ No objeto `contato.whatsapp`:
 
 - `numero` — apenas dígitos, com DDI (ex.: `5511999999999`)
 - `mensagemPadrao` — mensagem ao clicar nos botões principais
-- `mensagemFaq`, `mensagemFaqExtra`, `mensagemConsultoria` — mensagens específicas
+- `mensagemFaq`, `mensagemFaqExtra`, `mensagemConsultoria`, `mensagemAnamnese` — mensagens específicas
+
+### Anamnese
+
+A página `/anamnese` permite que o cliente preencha um formulário e envie os dados formatados para o WhatsApp da empresa. Edite textos e opções na seção `anamnese` do `site.json`.
 
 ### Ícones dos serviços
 

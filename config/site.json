@@ -14,7 +14,8 @@
       "mensagemPadrao": "Olá! Gostaria de saber mais sobre os serviços da Lizaviê Financial Management.",
       "mensagemConsultoria": "Olá! Gostaria de falar com um especialista sobre meu caso.",
       "mensagemFaq": "Olá! Tenho uma dúvida sobre os serviços da Lizaviê.",
-      "mensagemFaqExtra": "Olá! Tenho outra dúvida sobre os serviços."
+      "mensagemFaqExtra": "Olá! Tenho outra dúvida sobre os serviços.",
+      "mensagemAnamnese": "Olá! Segue minha anamnese financeira preenchida pelo site:"
     },
     "telefone": {
       "numero": "+5571982332697",
@@ -54,11 +55,12 @@
 
   "navegacao": {
     "links": [
-      { "label": "Serviços", "href": "#servicos" },
-      { "label": "Como Funciona", "href": "#como-funciona" },
-      { "label": "Depoimentos", "href": "#depoimentos" },
-      { "label": "FAQ", "href": "#faq" },
-      { "label": "Contato", "href": "#contato" }
+      { "label": "Serviços", "href": "/#servicos" },
+      { "label": "Como Funciona", "href": "/#como-funciona" },
+      { "label": "Depoimentos", "href": "/#depoimentos" },
+      { "label": "FAQ", "href": "/#faq" },
+      { "label": "Anamnese", "href": "/anamnese" },
+      { "label": "Contato", "href": "/#contato" }
     ]
   },
 
@@ -252,6 +254,53 @@
       "iniciais": "RF"
     }
   ],
+
+  "anamnese": {
+    "badge": "Avaliação Inicial",
+    "titulo": "Anamnese",
+    "tituloDestaque": "Financeira",
+    "descricao": "Preencha o formulário abaixo para que nossa equipe analise seu caso com confidencialidade. Ao enviar, você será direcionado ao WhatsApp com suas respostas organizadas.",
+    "avisoPrivacidade": "Seus dados são tratados com confidencialidade, em conformidade com a LGPD. As informações são enviadas diretamente para nossa equipe via WhatsApp.",
+    "botaoEnviar": "Enviar pelo WhatsApp",
+    "botaoEnviando": "Abrindo WhatsApp...",
+    "seo": {
+      "titulo": "Anamnese Financeira | Lizaviê Financial Management",
+      "descricao": "Preencha a anamnese financeira da Lizaviê e envie seus dados com segurança pelo WhatsApp para uma avaliação personalizada do seu caso."
+    },
+    "campos": {
+      "nomeCompleto": "Nome completo",
+      "telefone": "WhatsApp / Telefone",
+      "email": "E-mail",
+      "cpf": "CPF",
+      "tipoPessoa": "Tipo de cadastro",
+      "cidade": "Cidade",
+      "estado": "Estado (UF)",
+      "servicoInteresse": "Serviço de interesse",
+      "restricaoNome": "Possui restrição no nome?",
+      "valorDividas": "Valor aproximado das dívidas",
+      "score": "Score de crédito (se souber)",
+      "observacoes": "Conte mais sobre sua situação"
+    },
+    "opcoes": {
+      "tipoPessoa": [
+        { "valor": "pf", "label": "Pessoa Física (CPF)" },
+        { "valor": "pj", "label": "Pessoa Jurídica (CNPJ)" }
+      ],
+      "restricaoNome": [
+        { "valor": "sim", "label": "Sim, estou negativado(a)" },
+        { "valor": "nao", "label": "Não, nome limpo" },
+        { "valor": "nao_sei", "label": "Não tenho certeza" }
+      ],
+      "valorDividas": [
+        { "valor": "ate_5k", "label": "Até R$ 5.000" },
+        { "valor": "5k_20k", "label": "R$ 5.000 a R$ 20.000" },
+        { "valor": "20k_50k", "label": "R$ 20.000 a R$ 50.000" },
+        { "valor": "50k_100k", "label": "R$ 50.000 a R$ 100.000" },
+        { "valor": "acima_100k", "label": "Acima de R$ 100.000" },
+        { "valor": "nao_sei", "label": "Não sei informar" }
+      ]
+    }
+  },
 
   "faq": [
     {
